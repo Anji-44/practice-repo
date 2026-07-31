@@ -2,10 +2,7 @@ package com.mycompany.app;
 
 public class App {
 
-    public App() {
-    }
-
-    public String getGreeting() {
+    public String getMessage() {
         return "Hello World!";
     }
 

@@ -40,7 +40,7 @@ pipeline {
                 // Simple deployment example
                 sh 'echo "Deploying application..."'
                 // Example of copying artifacts to a deploy location
-                sh 'cp target/basic-java-app-1.0-SNAPSHOT.jar /path/to/deploy/'
+                sh 'cp target/basic-java-app-1.0-SNAPSHOT.jar .'
             }
         }
     }

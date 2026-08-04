@@ -54,6 +54,36 @@ pipeline {
             }
         }
 
+        stage('Workspace') {
+            steps {
+                sh 'pwd'
+            }
+        }
+
+        stage('List Files') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+       
+        stage('Environment') {
+            steps {
+                sh 'printenv'
+            }
+        }
+
+        stage('Git Version') {
+            steps {
+                sh 'git --version'
+            }
+        }
+        
+        stage('Current User') {
+            steps {
+                sh 'whoami'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 // Simple deployment example

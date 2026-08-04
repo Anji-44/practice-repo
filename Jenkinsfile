@@ -35,6 +35,14 @@ pipeline {
             }
         }
 
+        stage('Verify') {
+            steps {
+                echo 'Verifying the application...'
+                sh 'ls -l target'
+            }
+        }
+
+
         stage('Deploy') {
             steps {
                 // Simple deployment example

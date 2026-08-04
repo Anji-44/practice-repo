@@ -42,6 +42,17 @@ pipeline {
             }
         }
 
+        stage('Java Version') {
+            steps {
+                sh 'java -version'
+            }
+        }
+
+        stage('Maven Version') {
+            steps {
+                sh 'mvn -version'
+            }
+        }
 
         stage('Deploy') {
             steps {

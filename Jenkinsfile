@@ -34,7 +34,15 @@ pipeline {
                 sh 'mvn package'
             }
         }
-
+        stage('Deploy to Tomcat') {
+            steps {
+                sh '''
+                sudo cp target/calculator-app-1.0-SNAPSHOT.war /opt/tomcat/webapps/
+                sudo systemctl restart tomcat
+                '''
+            }
+        }    
+            
         stage('Verify') {
             steps {
                 echo 'Verifying the application...'
